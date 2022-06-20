@@ -4,7 +4,7 @@
      
     `;
 
-    customElements.define('com-sap-sample-helloworld2', class HelloWorld2 extends HTMLElement {
+    customElements.define('com-sap-sample-helloworld3', class HelloWorld3 extends HTMLElement {
 
 
 		constructor() {
