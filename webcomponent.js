@@ -65,7 +65,7 @@
 			this._tagContainer.appendChild(theText); 
 			this._shadowRoot.appendChild(this._tagContainer);
 		    }
-	
+		}
      
 	});
         
