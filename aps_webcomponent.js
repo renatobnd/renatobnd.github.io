@@ -14,8 +14,6 @@
 		</form>
 	`;
 
-	customElements.define("com-sap-sample-helloworld3-aps", HelloWorldAps);
-	
 	class HelloWorldAps extends HTMLElement {
 		constructor() {
 			super();
@@ -44,5 +42,5 @@
 		}
 	}
 
-
+customElements.define("com-sap-sample-helloworld3-aps", HelloWorldAps);
 })();
