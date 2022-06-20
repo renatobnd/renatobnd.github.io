@@ -1,19 +1,20 @@
 (function()  {
     let tmpl = document.createElement('template');
-    tmpl.innerHTML = `
-     
+    tmpl.innerHTML = `     
     `;
 
-    customElements.define('com-sap-sample-helloworld3', class HelloWorld3 extends HTMLElement {
+    customElements.define('com-sap-sample-helloworld3', class HelloWorld extends HTMLElement {
 
 
 		constructor() {
-			    super(); 
-			    this._shadowRoot = this.attachShadow({mode: "open"});
+			super(); 
+			this._shadowRoot = this.attachShadow({mode: "open"});
 			    this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+			    this._firstConnection = false;
 			    this._tagContainer;
 			    this._tagType = "h1";
 			    this._tagText = "Hello World";
+
 		}
 
 
