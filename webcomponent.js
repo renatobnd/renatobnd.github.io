@@ -7,21 +7,14 @@
 
 
 		constructor() {
-		    super();
-		    this._shadowRoot = this.attachShadow({mode: "open"});
-		    this._shadowRoot.appendChild(template.content.cloneNode(true));
-		    this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
-		}
+			super(); 
+			this._shadowRoot = this.attachShadow({mode: "open"});
+            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this._firstConnection = false;
+            this._tagContainer;
+            this._tagType = "h1";
+            this._tagText = "Hello World";
 
-		_submit(e) {
-		    e.preventDefault();
-		    this.dispatchEvent(new CustomEvent("propertiesChanged", {
-			    detail: {
-				properties: {
-				    widgetText: this.widgetText
-				}
-			    }
-		    }));
 		}
 
         //Fired when the widget is added to the html DOM of the page
@@ -42,8 +35,10 @@
 
         //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-                      this.redraw();
+            if (this._firstConnection){
+                this.redraw();
             }
+        }
         
         //When the custom widget is removed from the canvas or the analytic application is closed
         onCustomWidgetDestroy(){
