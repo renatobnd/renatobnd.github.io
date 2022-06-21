@@ -1,18 +1,18 @@
 (function() {
 	let template = document.createElement("template");
 	template.innerHTML = `
-			    <form id="form">
-				<fieldset>
-				    <legend>Custom Widget Text</legend>
-				    <table>
+		<form id="form">
+			<fieldset>
+				<legend>Custom Widget Text</legend>
+				<table>
 					<tr>
-					    <td>Text</td>
-					    <td><input id="aps_text" type="string"></td>
+						<td>Text</td>
+						<td><input id="aps_text" type="string"></td>
 					</tr>
-				    </table>
-				</fieldset>
-			    </form>
-			`;
+				</table>
+			</fieldset>
+		</form>
+	`;
 
 	class HelloWorldAps extends HTMLElement {
 		constructor() {
@@ -44,3 +44,4 @@
 
 customElements.define("com-sap-sample-helloworld3-aps", HelloWorldAps);
 })();
+
