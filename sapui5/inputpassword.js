@@ -14,7 +14,7 @@
         <script id="oView" name="oView" type="sapui5/xmlview">
             <mvc:View
                 controllerName = "myView.Template"
-                xmlns:l="sp.ui.layout"
+                xmlns:l="sap.ui.layout"
                 xmlns:mvc="sap.ui.core.mvc"
                 xmlns="sap.m">
                 <l:VerticalLayout
