@@ -19,7 +19,7 @@
                 xmlns="sap.m">
                 <l:VerticalLayout
                     class="sapUiContentPadding"
-                    width="100%"
+                    width="100%">
                     <l:content>
                     <Input
                         id="passwordInput"
