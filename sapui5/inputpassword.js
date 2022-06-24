@@ -24,7 +24,7 @@
                     <Input
                         id="passwordInput"
                         type="Password"
-                        placeholder="Enter password..." liveChange -"onButtonPress"/>
+                        placeholder="Enter password..!" liveChange="onButtonPress"/>
                     </l:content>
                 </l:VerticalLayout>
             </mvc:View>
@@ -73,7 +73,7 @@
         this._export_settings.password = value;
     }
 
-    static get observedAttibutes() {
+    static get observedAttributes() {
         return [
             "password"
         ];
@@ -105,7 +105,7 @@ function loadthis(that) {
             "use strict";
 
             return Controller.extend("myView.Template", {
-                onButtonPress: function(oEvent){
+                onButtonPress: function(oEvent) {
                     _password = oView.byId("passwordInput").getValue();
                     that._firePropertiesChanged();
                     console.log(_password);
